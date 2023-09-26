@@ -3,5 +3,10 @@
 {% block body %}
     <h2>Active Listings</h2>
 
-    TODO
+    {% for listing in active_listings %}
+        <h3>{{ listing.title }}</h3>
+        <p>{{ listing.description }}</p>
+        <img src="{{ listing.image_url }}" alt="{{ listing.title }} image">
+    {% endfor %}
+    
 {% endblock %}
